@@ -1,0 +1,27 @@
+{
+  "name": "segundoparcial",
+  "version": "1.0.0",
+  "description": "Este es el proyecto del segundo parcial de la materia de programacion de internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanmalilla36/SegundoParcial.git"
+  },
+  "author": "Ivan Antonio Ibarra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanmalilla36/SegundoParcial/issues"
+  },
+  "homepage": "https://github.com/ivanmalilla36/SegundoParcial#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.4",
+    "nodemon": "^1.18.4"
+  }
+}
