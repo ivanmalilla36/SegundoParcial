@@ -1,0 +1,29 @@
+extends layout
+block content
+
+  table.table.table-dark
+    thead
+      tr
+        th(scope='col') nombre
+        th(scope='col') descripcion
+        th(scope='col') imagenUrl
+        th(scope='col') telefono
+        th(scope='col') longitud
+        th(scope='col') latitud
+        th(scope='col')
+        th(scope='col')
+    tbody
+      each val in plazas
+        tr
+          td= val.nombre
+          td= val.descripcion
+          td= val.imagenUrl
+          td= val.telefono
+          td= val.longitud
+          td= val.latitud
+          td
+              a.btn.btn-outline-primary(href='deletePlaza/'+val.id, type='button') Eliminar
+          td
+              a.btn.btn-outline-primary(href='favorito/'+val.id, type='button') Mostrar
+
+  a.btn.btn-outline-primary(href='/api/nuevaplaza', type='button') Nuevo

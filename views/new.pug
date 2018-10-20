@@ -1,0 +1,23 @@
+extends layout
+block content
+	form(method='POST', action='/api/savePlaza')
+		.form-group
+		label(for='exampleInputEmail1') nombre
+		input#exampleInputEmail1.form-control(name="nombre", aria-describedby='emailHelp', placeholder='Teclea tu nombre')
+		.form-group
+		label(for='exampleInputEmail1') descripcion
+		input#exampleInputEmail1.form-control(name="descripcion", aria-describedby='emailHelp', placeholder='teclea la descripcion')
+		.form-group
+		label(for='exampleInputEmail1') imagenUrl
+		input#exampleInputEmail1.form-control(name="imagenUrl", aria-describedby='emailHelp', placeholder='Ingresa el url de la imagen')
+		.form-group
+		label(for='exampleInputEmail1') telefono
+		input#exampleInputEmail1.form-control(name="telefono", aria-describedby='emailHelp', placeholder='Teclea el telefono')
+		.form-group
+		label(for='exampleInputEmail1') latitud
+		input#exampleInputEmail1.form-control(name="latitud", aria-describedby='emailHelp', placeholder='Teclea la latitud')
+		.form-group
+		label(for='exampleInputEmail1') longitud
+		input#exampleInputEmail1.form-control(name="longitud", aria-describedby='emailHelp', placeholder='Teclea la logitud')
+		button.btn.btn-dark(type='submit') Guardar
+

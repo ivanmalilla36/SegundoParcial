@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/node_modules/bootstrap/dist'))
 
 const path = require("path")
 
-const api = require('./routes/Plaza');
+const api = require('./routes/plazas');
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());

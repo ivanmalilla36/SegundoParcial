@@ -6,10 +6,11 @@ const Schema = mongoose.Schema;
 
 const PlazaSchema = Schema({
 	nombre: String,
-	description: String,
-	imagenURL: String,
-	longitud: Long,
-	Latitud: Long,
+	descripcion: String,
+	imagenUrl: String,
+	longitud: String,
+	latitud: String,
+	telefono: String
 })
 
 module.exports = mongoose.model('Plaza', PlazaSchema)

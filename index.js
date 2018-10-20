@@ -8,7 +8,7 @@ mongoose.connect('mongodb://plasa:abril1994@ds137263.mlab.com:37263/parcial2',(e
 
 	if (err) {
 		// throw err;
-		console.log("Este es un error")
+		console.log(err)
 	}
 	else{
 		app.listen(port, () => {
