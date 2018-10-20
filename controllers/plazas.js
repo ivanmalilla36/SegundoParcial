@@ -72,9 +72,25 @@ function newPlaza(req,res){
 	res.render('new.pug', {title: "Nueva Plaza"})
 }
 
+function getPlaza(req,res){
+
+	const plazaId = req.params.id
+
+	Plaza.findById(plazaId, function(err,plaza){
+		if (err) {
+			res.status(500).send("Error al devolver marcador")
+			// console.log(err)
+		}else {
+		// res.status(200).send({data: plaza})
+		res.render('show.pug', {title: "show plaza", plaza: plaza})
+		}
+	})
+}
+
 module.exports = {
 	getPlazas,
 	newPlaza,
 	savePlaza,
-	deletePlaza
+	deletePlaza,
+	getPlaza,
 }

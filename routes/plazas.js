@@ -13,4 +13,6 @@ api.get('/nuevaplaza', PlazasController.newPlaza)
 
 api.get('/deletePlaza/:id', PlazasController.deletePlaza)
 
+api.get('/plaza/:id?', PlazasController.getPlaza)
+
 module.exports = api;

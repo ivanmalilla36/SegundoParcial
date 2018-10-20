@@ -1,0 +1,20 @@
+extends layout
+block content
+	table.table.table-dark
+		thead
+			tr
+				th(scope='col') Nombre
+				th(scope='col') Descripcion
+				th(scope='col') ImagenUrl
+				th(scope='col') Telefono
+				th(scope='col') Latitud
+				th(scope='col') Longitud
+		tbody
+			tr
+				td= plaza.nombre
+				td= plaza.descripcion
+				td= plaza.imagenUrl
+				td= plaza.telefono
+				td- plaza.longitud
+				td- plaza.latitud
+	a.btn.btn-outline-primary(href='/api/plazas', type='button') Regresar
