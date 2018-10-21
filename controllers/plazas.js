@@ -16,6 +16,20 @@ Plaza.find({}).exec(function(err, plazas){
 	});
 }
 
+function getPlazasM(req,res){
+Plaza.find({}).exec(function(err, plazas){ 
+		if (err) {
+			throw err;
+			res.status(500).send("error")
+		}
+		if(!plazas){
+			res.status(404).send("no ahi marcadores")
+		}
+		res.status(200).send({plazas: plazas})
+		// res.render('index.pug', {plazas:plazas, title: "mis plazas"})
+	});
+}
+
 function savePlaza(req,res){
 	const plaza = new Plaza()
 	const params = req.body
@@ -93,4 +107,5 @@ module.exports = {
 	savePlaza,
 	deletePlaza,
 	getPlaza,
+	getPlazasM,
 }

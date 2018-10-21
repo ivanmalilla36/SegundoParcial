@@ -15,4 +15,6 @@ api.get('/deletePlaza/:id', PlazasController.deletePlaza)
 
 api.get('/plaza/:id?', PlazasController.getPlaza)
 
+api.get('/plazasM', PlazasController.getPlazasM)
+
 module.exports = api;
