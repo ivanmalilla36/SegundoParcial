@@ -17,4 +17,6 @@ api.get('/plaza/:id?', PlazasController.getPlaza)
 
 api.get('/plazasM', PlazasController.getPlazasM)
 
+api.post('/savePlazaMobile', PlazasController.savePlazaMobile)
+
 module.exports = api;

@@ -30,6 +30,28 @@ Plaza.find({}).exec(function(err, plazas){
 	});
 }
 
+function savePlazaMobile(req,res){
+	const plaza = new Plaza()
+	const params = req.body
+
+	plaza.nombre = params.nombre
+	plaza.descripcion = params.descripcion
+	plaza.imagenUrl = params.imagenUrl
+	plaza.latitud = params.latitud
+	plaza.longitud = params.longitud
+	plaza.telefono = params.telefono
+
+	plaza.save((err,plazaStored) => {
+		if (err) {
+			throw err;
+			res.send({message: "No se pudo guardar el registro"})
+		}
+		else {
+			res.send({message:plazaStored})
+			// res.redirect("/api/plazas")
+		}
+	})
+
 function savePlaza(req,res){
 	const plaza = new Plaza()
 	const params = req.body
@@ -108,4 +130,5 @@ module.exports = {
 	deletePlaza,
 	getPlaza,
 	getPlazasM,
+	savePlazaMobile
 }
