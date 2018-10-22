@@ -7,11 +7,9 @@ const api = express.Router()
 
 api.get('/plazas', PlazasController.getPlazas)
 
-api.post('/savePlazaM' PlazasController.savePlazaM)
-
-api.get('/getPlazasM', PlazasController.getPlazasM)
-
 api.post('/savePlaza', PlazasController.savePlaza)
+
+// api.post('/savePlazaM' PlazasController.savePlazaM)
 
 api.get('/nuevaplaza', PlazasController.newPlaza)
 

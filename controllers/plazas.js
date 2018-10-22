@@ -129,5 +129,5 @@ module.exports = {
 	deletePlaza,
 	getPlaza,
 	getPlazasM,
-	savePlazaM
+	savePlazaM,
 }
